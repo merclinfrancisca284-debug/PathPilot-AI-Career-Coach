@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PathPilot — AI Career Coach</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">✦</span> PathPilot</a>
+    <span class="tag">YOUR CAREER, YOUR NEXT STEP</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CAREER CLARITY STARTS HERE</p>
+        <h1>Turn your skills into<br><span>a clear career path.</span></h1>
+        <p class="sub">Tell us what you know and what interests you. Get a starter career match and a practical learning roadmap.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="spark">✦</div><div class="mini-card">YOUR<br><b>NEXT MOVE</b></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / YOUR PROFILE</p><h2>Let's get to know you</h2></div>
+        <span class="step">Takes about 1 minute</span>
+      </div>
+      <form id="careerForm">
+        <div class="form-grid">
+          <label>What are you studying?
+            <select id="degree">
+              <option value="AI & Data Science">AI & Data Science</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label>Which area interests you most?
+            <select id="interest">
+              <option value="Artificial Intelligence">Artificial Intelligence</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+            </select>
+          </label>
+          <label class="wide">Your current skills <span class="hint">(separate with commas)</span>
+            <input id="skills" placeholder="e.g. Python, HTML, CSS, Java" />
+          </label>
+          <label>Experience level
+            <select id="level">
+              <option>Beginner</option><option>Intermediate</option><option>Advanced</option>
+            </select>
+          </label>
+          <label>Weekly learning time
+            <select id="hours">
+              <option value="3">1–3 hours</option><option value="5" selected>4–5 hours</option>
+              <option value="8">6–8 hours</option><option value="12">9+ hours</option>
+            </select>
+          </label>
+        </div>
+        <button class="primary" type="submit">Generate my career roadmap <span>↗</span></button>
+      </form>
+    </section>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <div class="result-top">
+        <div><p class="eyebrow">02 / YOUR STARTER PLAN</p><h2>Your career direction</h2></div>
+        <button id="reset" class="text-button">Edit profile ↗</button>
+      </div>
+      <div class="match-card">
+        <div><span class="match-label">SUGGESTED CAREER PATH</span><h3 id="careerName">AI / ML Engineer</h3><p id="careerDesc"></p></div>
+        <div class="match-score"><strong id="matchScore">88%</strong><span>interest match*</span></div>
+      </div>
+      <p class="disclaimer">*This is a rule-based learning suggestion, not a scientifically validated aptitude score or a job guarantee.</p>
+      <div class="roadmap-head"><h3>Your 4-step roadmap</h3><span id="timeNote"></span></div>
+      <div id="roadmap" class="roadmap"></div>
+      <div class="skills-box"><h3>Skills to focus on next</h3><div id="skillTags" class="tags"></div></div>
+      <button id="download" class="secondary">Download my plan ↓</button>
+    </section>
+    <footer>PathPilot · A student-built career exploration project</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
